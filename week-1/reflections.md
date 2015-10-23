@@ -52,4 +52,50 @@ The cd command is important because you need to understand your file system and 
 -help: displays brief summaries of the shell’s commands, if a pattern is specified it displays all commands matching the pattern
 
 
+
 ### 1.4 Forking and Cloning Reflection
+
+####Create a New Repo
+
+Step 1: Navigate to your github.com profile
+
+Step 2: Click on the “+” in to top right of your navigation bar and select “New Repository”
+
+Step 3: Enter a short and memorable name for your new repository; write a short description (optional)
+
+Step 4: Select whether your repository will be public or private
+
+Step 5: Add .gitignore and/or license options (optional)
+
+Step 6: Click the “Create repository” button to complete the form
+
+
+####Fork a Repo
+
+Step 1: Log in to github.com
+
+Step 2: Search/find a target repository you want to or can fork
+
+Step 3: Click on the “Fork” button at the top right of the repository page to create a copy of the repo onto your own GitHub account
+
+
+####Clone a Repo
+
+Step 1: Open your terminal and check where you are with pwd to make sure you are in the correct directory you want to clone the repo to (make sure not to clone a repository in another local GitHub repository)
+
+Step 2: Copy the URL of your FORKED repo
+
+Step 3: Type “git clone [copy of FORKED URL]
+
+
+
+####Reasons to Fork a Repo
+
+You can fork a repository rather than creating a new one to propose changes to someone else’s project, use someone else’s project as a starting point for you own idea, and/or use it as an exemplar to help you study and practice reading code.
+
+
+
+####Reflecting on My Struggles
+
+I struggled with deleting the clone of the repository that was locally on my computer because I was using rm -r. However, going back through my notes and using the man rm command I found I needed to use –f option as well to force the removal with out being prompted. This helped to reiterate how important it is to use resources such as the man command or notes you’ve taken.
+
