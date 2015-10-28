@@ -12,42 +12,42 @@
 
 ####Planning
 ```
-create a sitemap based on the information you gathered
-the end-user must be kept in mind
-decide on what technologies should be implemented
+*create a sitemap based on the information you gathered
+*the end-user must be kept in mind
+*decide on what technologies should be implemented
 ```
 
 ####Design
 ```
-determine the look and feel of the site: colors, fonts, etc.
-create a wireframe or wireframes as prototypes for the design of the site
-send the prototypes to the client to get their input
+*determine the look and feel of the site: colors, fonts, etc.
+*create a wireframe or wireframes as prototypes for the design of the site
+*send the prototypes to the client to get their input
 ```
 
 ####Development
 ```
-website is created by developing the homepage first
-homepage serves as the template for the content pages and contains the main navigational structure
-HTML/CSS code complies to the current web standards
+*website is created by developing the homepage first
+*homepage serves as the template for the content pages and contains the main navigational structure
+*HTML/CSS code complies to the current web standards
 ```
 
 ####Testing and Delivery
 ```
-test for complete functionality of forms and other scripts
-test for compatibility issues between browsers
-test all code written for the website to make sure it validates
-once the website is approved the file is uploaded using a FTP program and put through 1 more test
-necessary plugins installed
-SEO(Search Engine Optimization)- the website is optimized to achieve higher rankings
+*test for complete functionality of forms and other scripts
+*test for compatibility issues between browsers
+*test all code written for the website to make sure it validates
+*once the website is approved the file is uploaded using a FTP program and put through 1 more test
+*necessary plugins installed
+*SEO(Search Engine Optimization)- the website is optimized to achieve higher rankings
 ```
 
 ####Maintenance
 ```
-offer new content and products
-update information, plugins, and APIs
-additional plugin installation
-upgrades
-backup site regularly
+*offer new content and products
+*update information, plugins, and APIs
+*additional plugin installation
+*upgrades
+*backup site regularly
 ```
 
 ###What is your site’s primary goal or purpose? What kind of content will your site feature?
