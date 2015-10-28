@@ -1,5 +1,5 @@
 ##Design and Sitemap Reflection
-![Sitemap](/week-2/imgs/site-map.png)
+![Sitemap](imgs/site-map.png)
 
 ##Design and Sitemap Reflection
 ###What are the 6 Phases of Web Design?
