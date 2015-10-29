@@ -14,7 +14,7 @@ Yes, I did enjoy wireframing my site.  I liked exploring other websites, using t
 I revised my wireframes several times by changing the structure and location of the elements I included in the header, body, and footer.
 
 #What questions did you ask during this challenge? What resources did you find to help you answer them?
-The questions I asked centered around what elements were usually included in the header, body, and footer as well as which wireframing tools were available.   I used http://wireframes.tumblr.com/ and wirify to get a visual understanding of how other designers wireframe.  Also, I explored the various tools listed in *A Beginner’s Guide to Wireframing”.
+The questions I asked centered around what elements were usually included in the header, body, and footer as well as which wireframing tools were available.   I used http://wireframes.tumblr.com/ and wirify to get a visual understanding of how other designers wireframe.  Also, I explored the various tools listed in *A Beginner’s Guide to Wireframing”*.
 
 #Which parts of the challenge did you enjoy and which parts did you find tedious?
 I enjoyed the designing process and playing around with the layout of my webpages once I found a wireframing tool I wanted to use.  The tedious part for me was trying to find a wireframing tool that truly offered a free version to create wireframes.
