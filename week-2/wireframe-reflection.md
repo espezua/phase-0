@@ -1,5 +1,5 @@
-![Index Wireframe](/imgs/wireframe-index.png)
-![Blog Index Wireframe](/imgs/wireframe-blog-index.png)
+![Index Wireframe](imgs/wireframe-index.png)
+![Blog Index Wireframe](imgs/wireframe-blog-index.png)
 
 #What is a wireframe?
 A wireframe is a two-dimensional mockup of the structure of a webpage including HTML elements like the header, body, and footer.  The wireframe is usually done in black and white so you can focus on the layout and hierarchy of information.  It can be created by drawing on paper, using sticky notes and markers on a whiteboard, or wireframing tools that allow you to design it in a file.
