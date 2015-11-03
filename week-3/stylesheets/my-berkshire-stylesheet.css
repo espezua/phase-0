@@ -67,8 +67,8 @@ table {
 
 .header h3 {
     font-size: 13px;
-     margin-top: 14px;
-     margin-bottom: -14px;
+    margin-top: 14px;
+    margin-bottom: -14px;
 }
 
 
@@ -95,3 +95,26 @@ table {
 .footer-text {
   font-size: 13px;
 }
+
+
+
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+When linking an external file like CSS to an HTML file it is important to include:
+  -the href attribute with the value specifying the path to the file, ex. href="path_to_file"
+  -the type attribute with the value specifying the type of document being linked, ex. type="text/css"
+  -the rel attribute to show the relationship between the HTML file and the linked file, ex. rel="stylesheet"
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+*/
