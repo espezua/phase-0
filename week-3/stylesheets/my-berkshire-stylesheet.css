@@ -28,7 +28,7 @@ tr {
 
 
 table {
-    width: 1400px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
@@ -75,18 +75,21 @@ table {
 .geico-section {
     text-align: center;
     font-size: 11px;
-    border-bottom: 1px solid #C0C0C0;
+    border-bottom: 2px solid #C0C0C0;
+    border-bottom-style: ridge;
     padding-bottom: 12px;
 }
 
 
 .topic-table {
-    border-bottom: 1px solid #C0C0C0;
+    border-bottom: 2px solid #C0C0C0;
+    border-bottom-style: ridge;
 }
 
 
 .contact-info {
-    border-bottom: 1px solid #C0C0C0;
+    border-bottom: 2px solid #C0C0C0;
+    border-bottom-style: ridge;
     font-size: 13px;
     padding-bottom: 12px;
 }
@@ -109,7 +112,8 @@ When linking an external file like CSS to an HTML file it is important to includ
 What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
 
 
-What CSS did you use to modify the element style (like size, color, etc.)
+What CSS did you use to modify the element style (like size, color, etc.)?
+We used font-size, font-weight, color, background-color, padding, margin, width, text-align, and font-family.
 
 
 Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
