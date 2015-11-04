@@ -4,28 +4,22 @@ body {
     font-family: 'Droid Sans', sans-serif;
 }
 
-
 a {
     color: #800080;
 }
 
-
 a:visited {
   color: #FF0000;
 }
-
 
 .update-date {
     font-size: 10px;
     margin-top: 2px;
 }
 
-
 tr {
     margin-top: 1px;
 }
-
-
 
 table {
     width: 90%;
@@ -34,7 +28,6 @@ table {
     font-size: 14px;
 }
 
-
 .header {
     font-weight: bold;
     text-align: center;
@@ -42,35 +35,29 @@ table {
     border-bottom-style: ridge;
 }
 
-
 .header h1 {
     font-size: 16px;
     margin-bottom: -12px;
 }
 
-
 .main-title {
     font-size: 200%;
 }
 
-
 .main-title-sm {
     font-size: 80%;
 }
-
 
 .header h2 {
     font-size: 15px;
     margin-top: 14px;
 }
 
-
 .header h3 {
     font-size: 13px;
     margin-top: 14px;
     margin-bottom: -14px;
 }
-
 
 .geico-section {
     text-align: center;
@@ -80,12 +67,10 @@ table {
     padding-bottom: 12px;
 }
 
-
 .topic-table {
     border-bottom: 2px solid #C0C0C0;
     border-bottom-style: ridge;
 }
-
 
 .contact-info {
     border-bottom: 2px solid #C0C0C0;
@@ -94,12 +79,9 @@ table {
     padding-bottom: 12px;
 }
 
-
 .footer-text {
   font-size: 13px;
 }
-
-
 
 
 /*
@@ -109,6 +91,7 @@ When linking an external file like CSS to an HTML file it is important to includ
   -the type attribute with the value specifying the type of document being linked, ex. type="text/css"
   -the rel attribute to show the relationship between the HTML file and the linked file, ex. rel="stylesheet"
 
+
 What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
 
 
@@ -116,7 +99,8 @@ What CSS did you use to modify the element style (like size, color, etc.)?
 We used font-size, font-weight, color, background-color, padding, margin, width, text-align, and font-family.
 
 
-Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+Did you modify the HTML to include classes or ids? If so, which did you choose and why?
+If you didn't, how would you know which one to add to your HTML?
 
 
 When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
