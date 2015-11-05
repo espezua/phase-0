@@ -37,7 +37,7 @@ To resize elements on the DOM using CSS you can edit existing CSS property-value
 *to shift a relatively-positioned element you set the top or bottom and right or left properties
 ```
 
-Before starting this challenge I was unsure about how to use positioning and the differences between them, so it's hard to say what was the easiest or hardest.  I'm still trying to understand the differences when applying it in CSS and I know that by using DevTools to experiment it will help me to discern the differences.
+Before starting this challenge I was unsure about how to use positioning and the differences between them, so it's hard to say what was the easiest or hardest.  I still don't fully grasp the differences when applying it in CSS in relation to your HTML and I know that by using DevTools to experiment it will help me to discern the differences.
 
 
 ###What are the differences between margin, border, and padding?
