@@ -141,9 +141,11 @@ using the body element with the font-family property to apply the font throughou
 Did you modify the HTML to include classes or ids? If so, which did you choose and why?
 If you didn't, how would you know which one to add to your HTML?
 We used classes to modify the HTML because they can be used multiple times.  We wanted to modify elements under the same class
-and target descendants of those elements.  When using ids that option should be used for targeting one element.
+and target descendants of those elements.  When using ids that option should be used for targeting an element once.
 
 
 When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
-I think our site had the cleaner code because would used semantic elements and classes to style our page.  The base code seemed to be messier and included additional tags that were unnecessary.  Also, that base code use elements like <b> to style the HTML when all of the styling for the page should be in your CSS.
+I think our site had the cleaner code because would used semantic elements and classes to style our page.
+The base code seemed to be messier and included additional tags that were unnecessary.  Also, that base code
+use elements like <b> to style the HTML when all of the styling for the page should be in your CSS.
 */
