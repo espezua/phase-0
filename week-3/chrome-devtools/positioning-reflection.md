@@ -37,7 +37,7 @@ To resize elements on the DOM using CSS you can edit existing CSS property-value
 *to shift a relatively-positioned element you set the top or bottom and right or left properties
 ```
 
-Before starting this challenge I was unsure about how to use positioning and the differences between them, so it's hard to say what was the easiest or hardest.  I'm still trying to figure the differences when actually using it in CSS and I know that by using DevTools to experiment it will help me to gain a better understanding.
+Before starting this challenge I was unsure about how to use positioning and the differences between them, so it's hard to say what was the easiest or hardest.  I'm still trying to understand the differences when applying it in CSS and I know that by using DevTools to experiment it will help me to discern the differences.
 
 
 ###What are the differences between margin, border, and padding?
@@ -50,7 +50,7 @@ margin: the space around an element that clears an area outside of the border an
 ###What was your impression of this challenge overall? (love, hate, and why?)
 I really enjoyed this challenge and thought it was fun.  I liked that you could experiement with different property-value pairs and target various elements in the DOM.  I feel I was able to gain a better understanding of positioning and the box model by using the Chrome DevTools inspector.
 
-![Color Change Exercise](imgs/change-color.png)
+![Color Change Exercise](imgs/change-colors.png)
 ![Column Exercise](imgs/column.png)
 ![Row Exercise](imgs/row.png)
 ![Equidistant Exercise](imgs/equidistant.png)
