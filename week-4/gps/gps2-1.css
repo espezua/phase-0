@@ -1,0 +1,125 @@
+/*****************************
+        General
+*****************************/
+
+
+body {
+  margin: 0;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+}
+
+article {
+  bottom-border: 1px solid gray;
+}
+article p {
+  font-size: .9em;
+}
+
+summary::-webkit-details-marker {
+  display:none;
+}
+
+details {
+  padding-left: 10px;
+}
+
+summary:first-of-type {
+  background-color: #e5e0e0;
+  border-top: 1px solid gray;
+}
+
+details:last-of-type {
+  border-bottom: 1px solid gray;
+}
+
+details p {
+  font-size: .8em;
+}
+
+a {
+  text-decoration: none;
+}
+/*****************************
+        Header
+*****************************/
+header {
+  float: left;
+  width: 100%;
+  background-color: #608DBD;
+}
+
+header h1, p {
+  padding-left: 20px;
+}
+
+header p {
+  background-color: #a4cdf9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+/*****************************
+        Left Column
+*****************************/
+
+.column-1 {
+  float: left;
+  width: 45%;
+  height: 1600px;
+  padding: 5px 2%;
+}
+
+.column-1 article {
+  margin-bottom: 35px;
+}
+
+.column-1 article h2 {
+  margin-bottom: 0;
+}
+
+.column-1 article p {
+  margin-top: 0;
+}
+
+.column-1 article ul {
+  list-style: none;
+}
+
+
+/*****************************
+        Right Column
+*****************************/
+.column-2 {
+  float: left;
+  width: 45%;
+  height: 1600px;
+  padding: 5px 2%;
+}
+
+.column-2 article {
+  margin-bottom: 35px;
+}
+
+.column-2 article h2 {
+  margin-bottom: 0;
+}
+
+.column-2 article p {
+  margin-top: 0;
+}
+
+
+/*****************************
+        Footer
+*****************************/
+footer {
+  width: 100%;
+  clear: both;
+  background-color: #a4cdf9;
+  padding: 30px 20px;
+}
+
+
+

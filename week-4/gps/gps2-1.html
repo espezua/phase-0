@@ -1,8 +1,8 @@
 <!--
 Write your names here:
-1.
-2.
-We spent [#] hours on this challenge.
+1.Jenna Espezua
+2. No Partner
+We spent [3] hours on this challenge.
 -->
 
 <!-- This challenge uses HTML5 syntax that may not be available in all browsers (It works in Chrome and Safari, from my testing. (<details> and<summary>). -->
@@ -12,6 +12,7 @@ We spent [#] hours on this challenge.
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="gps2-1.css" type="text/css">  <!-- Insert a link to the stylesheet here -->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
     <title>Git Cheat Sheet</title>
   </head>
 
@@ -45,17 +46,17 @@ We spent [#] hours on this challenge.
         <p>Configure user information for all local repositories</p>
         <p> To see a summary of each command, click it.</p>
 
-        <details>
+        <details open>
           <summary><code>$ git config --global user.name "[name]"</code></summary>
           <p>Sets the name you want attached to your commit transactions</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git config --global user.email "[email address]"</code></summary>
           <p>Sets the email you want atached to your commit transactions</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git config --global color.ui auto</code></summary>
           <p>Enables helpful colorization of command line output</p>
         </details>
@@ -65,12 +66,12 @@ We spent [#] hours on this challenge.
         <h2>CREATE REPOSITORIES</h2>
         <p>Start a new repository or obtain one from an existing URL</p>
 
-        <details>
+        <details open>
           <summary><code>$ git init [project-name]</code></summary>
           <p>Creates a new local repository with the specified name</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git clone [url]</code></summary>
           <p>Downloads a project and its entire version history</p>
         </details>
@@ -80,32 +81,32 @@ We spent [#] hours on this challenge.
         <h2>MAKE CHANGES</h2>
         <p>Review edits and craft a commit transaction</p>
 
-        <details>
+        <details open>
           <summary><code>$ git status</code></summary>
           <p>Lists all new or modified files to be committed</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git add [file]</code></summary>
           <p>Snapshots the file in preparation for versioning</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git reset [file]</code></summary>
           <p>Unstages the file, but preserve its contents</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git diff</code></summary>
           <p>Shows file differences not yet staged</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git diff --staged</code></summary>
           <p>Shows file differences between staging and the last file version</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git commit -m "[descriptive message]"</code></summary>
           <p>Records file snapshots permanently in version history</p>
         </details>
@@ -115,27 +116,27 @@ We spent [#] hours on this challenge.
         <h2>GROUP CHANGES</h2>
         <p>Name a series of commits and combine completed efforts</p>
 
-        <details>
+        <details open>
           <summary><code>$ git branch</code></summary>
           <p>Lists all local branches in the current repository</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git branch [branch-name]</code></summary>
           <p>Creates a new branch</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git checkout [branch-name]</code></summary>
           <p>Switches to the specified branch and updates the working directory</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git merge [branch]</code></summary>
           <p>Combines the specified branch’s history into the current branch</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git branch -d [branch-name]</code></summary>
           <p>Deletes the specified branch</p>
         </details>
@@ -147,17 +148,17 @@ We spent [#] hours on this challenge.
         <h2>REFACTOR FILENAMES</h2>
         <p>Relocate and remove versioned files</p>
 
-        <details>
+        <details open>
           <summary><code>$ git rm [file]</code></summary>
           <p>Deletes the file from the working directory and stages the deletion</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git rm --cached [file]</code></summary>
           <p>Removes the file from version control but preserves the file locally</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git mv [file-original] [file-renamed]</code></summary>
           <p>Changes the file name and prepares it for commit</p>
         </details>
@@ -167,7 +168,7 @@ We spent [#] hours on this challenge.
         <h2>SUPPRESS TRACKING</h2>
         <p>Exclude temporary files and paths</p>
 
-        <details>
+        <details open>
           <summary><code>*.log
                     build/
                     temp-*
@@ -175,7 +176,7 @@ We spent [#] hours on this challenge.
           <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git ls-files --other --ignored --exclude-standard</code></summary>
           <p>Lists all ignored files in this project</p>
         </details>
@@ -185,22 +186,22 @@ We spent [#] hours on this challenge.
         <h2>SAVE FRAGMENTS</h2>
         <p>Shelve and restore incomplete changes</p>
 
-        <details>
+        <details open>
           <summary><code>$ git stash</code></summary>
           <p>Temporarily stores all modified tracked files</p>
         </details>
 
-        <details>
-          <summary><code>$ git stash list</code>Lists all stashed changesets</summary>
-          <p></p>
+        <details open>
+          <summary><code>$ git stash list</code></summary>
+          <p>Lists all stashed changesets</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git stash pop</code></summary>
           <p>Restores the most recently stashed files</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git stash drop</code></summary>
           <p>Discards the most recently stashed changeset</p>
         </details>
@@ -211,22 +212,22 @@ We spent [#] hours on this challenge.
         <h2>REVIEW HISTORY</h2>
         <p>Browse and inspect the evolution of project files</p>
 
-        <details>
+        <details open>
           <summary><code>$ git log</code></summary>
           <p>Lists version history for the current branch</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git log --follow [file]</code></summary>
           <p>Lists version history for a file, including renames</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git diff [first-branch]...[second-branch]</code></summary>
           <p>Shows content differences between two branches</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git show [commit]</code></summary>
           <p>Outputs metadata and content changes of the specified commit</p>
         </details>
@@ -236,7 +237,7 @@ We spent [#] hours on this challenge.
         <h2>REDO COMMITS</h2>
         <p>Erase mistakes and craft replacement history</p>
 
-        <details>
+        <details open>
           <summary><code>$ git reset [commit]</code></summary>
           <p>Undoes all commits after [commit], preserving changes locally</p>
         </details>
@@ -251,22 +252,22 @@ We spent [#] hours on this challenge.
         <h2>SYNCHRONIZE CHANGES</h2>
         <p>Register a repository bookmark and exchange version history</p>
 
-        <details>
+        <details open>
           <summary><code>$ git fetch [bookmark]</code></summary>
           <p>Downloads all history from the repository bookmark</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git merge [bookmark]/[branch]</code></summary>
           <p>Combines bookmark’s branch into current local branch</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git push [alias] [branch]</code></summary>
           <p>Uploads all local branch commits to GitHub</p>
         </details>
 
-        <details>
+        <details open>
           <summary><code>$ git pull</code></summary>
           <p>Downloads bookmark history and incorporates changes</p>
         </details>
@@ -276,6 +277,20 @@ We spent [#] hours on this challenge.
     <footer>
       This information is copied directly from <a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">GitHub's Training Cheatsheet</a>.
     </footer>
-  <!-- Add your reflection here as a comment. -->
+  <!-- Add your reflection here as a comment.
+    I'm starting to feel more confident with using the position property, floats, and adjusting the size of the boxes using
+    width, height, padding, border, and margin properties. However, I still need more practice with using positioning and thinking
+    about the containing elements to better understand what is happening when I apply new CSS rules.  As well, I know there is
+    still more to learn about best practices, property-value pairs, etc.
+
+    I feel I meet expectations for the learning competencies because I was able to:
+      *link my CSS file
+      *apply CSS to position elements like the header, footer, sections with class names, articles within the sections
+      *used classes to target elements, classes can be used on multiple elements, ids should only be used to target one element
+      *resized elements using the font-size, width, height, margin, border, and padding properties
+      *used background-color, color, font-family, font-weight, and pseudo-classes to target elements and dress up the page
+      *used the Chrome DevTools inspector a little to manipulate the HTML and CSS
+      *used Google Fonts to find and then added the link in the head of a choosen font
+   -->
   </body>
 </html>
