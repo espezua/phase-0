@@ -40,4 +40,7 @@ puts (60 * 24 * 365 * 10).to_s + " minutes in a decade"
 
 ####Exercises
 https://github.com/espezua/phase-0/blob/master/week-4/defining-variables.rb
+
 https://github.com/espezua/phase-0/blob/master/week-4/simple-string.rb
+
+https://github.com/espezua/phase-0/blob/master/week-4/basic-math.rb
