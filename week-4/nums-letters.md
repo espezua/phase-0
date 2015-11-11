@@ -1,3 +1,5 @@
+##Numbers, Letters, and Variables
+
 ###What does puts do?
 The method puts prints the output of what came after it to the console's screen with a new line and it returns nil.
 
