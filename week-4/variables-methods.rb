@@ -7,7 +7,7 @@ middle_name = gets.chomp
 puts "Great. What's your last name?"
 last_name = gets.chomp
 
-puts "Nice to meet you " + first_name + " " + middle_name + " " + last_name + "!"
+puts "Nice to meet you #{first_name} #{middle_name} #{last_name}!"
 
 
 #Bigger, Better Favorite Number Challenge
@@ -19,9 +19,9 @@ puts "Have you ever thought of #{better_num}?  It could be your new favorite num
 
 =begin
 Exercises
-#https://github.com/espezua/phase-0/blob/master/week-4/define-method/my_solution.rb
-#https://github.com/espezua/phase-0/blob/master/week-4/address/my_solution.rb
-#https://github.com/espezua/phase-0/blob/master/week-4/math/my_solution.rb
+https://github.com/espezua/phase-0/blob/master/week-4/define-method/my_solution.rb
+https://github.com/espezua/phase-0/blob/master/week-4/address/my_solution.rb
+https://github.com/espezua/phase-0/blob/master/week-4/math/my_solution.rb
 
 
 How do you define a local variable?
