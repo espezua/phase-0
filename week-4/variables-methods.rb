@@ -16,7 +16,7 @@ favorite_num = gets.chomp
 better_num = (favorite_num.to_i + 1).to_s
 puts "Have you ever thought of #{better_num}?  It could be your new favorite number that's bigger and better!"
 
-
+=begin
 How do you define a local variable?
 
 
@@ -34,4 +34,4 @@ How do you run an RSpec file from the command line?
 
 What was confusing about this material? What made sense?
 
-
+=end
