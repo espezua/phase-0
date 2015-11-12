@@ -1,4 +1,4 @@
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Joe Plonsker.
 
 =begin # We want to input three sides of a triangle and have our output
 be true and describe the type of triangle or false.
