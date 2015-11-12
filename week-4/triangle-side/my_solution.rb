@@ -19,6 +19,8 @@ def valid_triangle?(a, b, c)
 end
 
 We tried multiple variations on the elsif statements
+but ultimately realized one of the last elsif conditions
+was the only condition needed.
 =end
 # Your Solution Below
 
