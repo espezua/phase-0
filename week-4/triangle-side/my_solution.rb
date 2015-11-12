@@ -11,12 +11,14 @@ def valid_triangle?(a, b, c)
     return true
   elsif ((a <= (b+c)) || (b <= (a+c)) || (c <= (a+b)) )
     return true
-## elsif a+b > c || a+c > b || b+c > a
-##   return true
-elsif a+b > c && a+c > b && b+c > a
-##   return true
+##elsif a+b > c || a+c > b || b+c > a
+##  return true
+##elsif a+b > c && a+c > b && b+c > a
+##  return true
   end
 end
+
+We tried multiple variations on the elsif statements
 =end
 # Your Solution Below
 
