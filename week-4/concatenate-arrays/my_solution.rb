@@ -7,4 +7,9 @@
 
 def array_concat(array_1, array_2)
   # Your code here
+  if (array_1.length == 0) && (array_2.length == 0)
+    return []
+  else
+    return array_1 + array_2
+  end
 end
