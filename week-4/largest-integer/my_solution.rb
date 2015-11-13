@@ -13,4 +13,15 @@
 # Your Solution Below
 def largest_integer(list_of_nums)
   # Your code goes here!
+  if (list_of_nums.length == 0)
+    return nil
+  else
+    largest_num = list_of_nums[0]
+    list_of_nums.each do |num|
+      if (num > largest_num)
+        largest_num = num
+      end
+    end
+    return largest_num
+  end
 end

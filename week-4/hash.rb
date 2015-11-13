@@ -6,9 +6,22 @@
 # Your Solution Below
 
 # my_info is empty to start.  Edit this!
-my_info = {}
+my_info = {
+first_name: "Jenna",
+last_name: "Esepzua",
+hometown: "Orlando",
+age: 30
+}
 
 
+#Accessing Hash Values
+puts my_info[:first_name]
+puts my_info[:last_name]
+puts my_info[:hometown]
+puts my_info[:age]
+
+#Iterating Over a Hash
+my_info.each { |key, value| puts value }
 
 
 
