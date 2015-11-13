@@ -11,6 +11,7 @@
 # If +list_of_nums+ is empty the method should return nil
 
 # Your Solution Below
+=begin Initial Solution
 def smallest_integer(list_of_nums)
   # Your code goes here!
   if (list_of_nums.length == 0)
@@ -24,4 +25,10 @@ def smallest_integer(list_of_nums)
     end
     return smallest_num
   end
+end
+=end
+
+#Refactored Solution
+def smallest_integer(list_of_nums)
+  return list_of_nums.sort().slice(0)
 end
