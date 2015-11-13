@@ -13,7 +13,9 @@ hometown: "Orlando",
 age: 30
 }
 
-
+my_info.each do |key, value|
+  puts value
+end
 
 
 
