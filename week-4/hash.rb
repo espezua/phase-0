@@ -8,7 +8,7 @@
 # my_info is empty to start.  Edit this!
 my_info = {
 first_name: "Jenna",
-last_name: "Esepzua",
+last_name: "Espezua",
 hometown: "Orlando",
 age: 30
 }
@@ -20,10 +20,11 @@ puts my_info[:last_name]
 puts my_info[:hometown]
 puts my_info[:age]
 
-#Iterating Over a Hash
+#Iterating over a hash using puts to print key values
 my_info.each { |key, value| puts value }
 
-
+#Iterating over a hash using puts to print key-value pairs
+my_info.each { |key, value| puts "#{key}: #{value}" }
 
 # RSpec Tests. They are included in this file because the local variables you are creating are not accessible across files. If we try to run these files as a separate file per normal operation, the local variable checks will return nil.
 
