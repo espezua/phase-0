@@ -14,6 +14,7 @@
 
 # Your Solution Below
 
+=begin Initial Solution
 def count_between(list_of_integers, lower_bound, upper_bound)
   # Your code goes here!
   sum = 0
@@ -29,4 +30,19 @@ def count_between(list_of_integers, lower_bound, upper_bound)
     end
     return sum
   end
+end
+
+def count_between(list_of_integers, lower_bound, upper_bound)
+  # Your code goes here!
+  sum = 0
+  list_of_integers.each { |x| sum+=1 if (x >= lower_bound) && (x <= upper_bound) }
+  return sum
+end
+=end
+
+#Refactored Solution
+
+def count_between(list_of_integers, lower_bound, upper_bound)
+  # Your code goes here!
+  return list_of_integers.count { |x| (x >= lower_bound) && (x <= upper_bound) }
 end
