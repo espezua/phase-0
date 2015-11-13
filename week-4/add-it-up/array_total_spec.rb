@@ -41,3 +41,4 @@ describe 'sentence_maker' do
     expect(sentence_maker(second_sentence)).to eq "Alaska has over 586 thousand miles."
   end
 end
+
