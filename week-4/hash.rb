@@ -6,7 +6,12 @@
 # Your Solution Below
 
 # my_info is empty to start.  Edit this!
-my_info = {}
+my_info = {
+first_name: "Jenna",
+last_name: "Esepzua",
+hometown: "Orlando",
+age: 30
+}
 
 
 
