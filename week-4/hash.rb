@@ -13,9 +13,15 @@ hometown: "Orlando",
 age: 30
 }
 
-my_info.each do |key, value|
-  puts value
-end
+
+#Accessing Hash Values
+puts my_info[:first_name]
+puts my_info[:last_name]
+puts my_info[:hometown]
+puts my_info[:age]
+
+#Iterating Over a Hash
+my_info.each { |key, value| puts value }
 
 
 
