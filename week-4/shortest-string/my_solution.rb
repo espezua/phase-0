@@ -11,6 +11,7 @@
 # If +list_of_words+ is empty the method should return nil
 
 #Your Solution Below
+=begin Initial Solution
 def shortest_string(list_of_words)
   # Your code goes here!
   if (list_of_words.length == 0)
@@ -24,4 +25,12 @@ def shortest_string(list_of_words)
     end
     return short_string
   end
+end
+=end
+
+#Refactored Solution
+def shortest_string(list_of_words)
+  list_of_words = list_of_words.sort_by {|x| x.length}
+  short_string = list_of_words[0]
+  return short_string
 end

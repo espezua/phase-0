@@ -11,6 +11,8 @@
 # If +list_of_nums+ is empty the method should return nil
 
 # Your Solution Below
+=begin Initial Solution
+
 def largest_integer(list_of_nums)
   # Your code goes here!
   if (list_of_nums.length == 0)
@@ -24,4 +26,10 @@ def largest_integer(list_of_nums)
     end
     return largest_num
   end
+end
+=end
+
+#Refactored Solution
+def largest_integer(list_of_nums)
+  return list_of_nums.sort().slice(-1)
 end

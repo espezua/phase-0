@@ -5,6 +5,8 @@
 
 # Your Solution Below
 
+=begin Initial Solution
+
 def array_concat(array_1, array_2)
   # Your code here
   if (array_1.length == 0) && (array_2.length == 0)
@@ -12,4 +14,11 @@ def array_concat(array_1, array_2)
   else
     return array_1 + array_2
   end
+end
+=end
+
+#Refactored Solution
+def array_concat(array_1, array_2)
+  # Your code here
+  return array_1.concat(array_2)
 end

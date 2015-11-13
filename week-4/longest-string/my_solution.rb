@@ -12,6 +12,7 @@
 
 
 # Your Solution Below
+=begin Initial Solution
 def longest_string(list_of_words)
   # Your code goes here!
   if (list_of_words.length == 0)
@@ -25,4 +26,12 @@ def longest_string(list_of_words)
     end
     return long_string
   end
+end
+=end
+
+#Refactored Solution
+def longest_string(list_of_words)
+  list_of_words = list_of_words.sort_by {|x| x.length}
+  long_string = list_of_words[-1]
+  return long_string
 end
