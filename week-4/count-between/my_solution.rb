@@ -16,4 +16,17 @@
 
 def count_between(list_of_integers, lower_bound, upper_bound)
   # Your code goes here!
+  sum = 0
+  if (list_of_integers.length == 0) || (upper_bound < lower_bound)
+    return 0
+  elsif (lower_bound == upper_bound)
+    return list_of_integers.length
+  else
+    list_of_integers.each do |x|
+      if (x >= lower_bound) && (x <= upper_bound)
+        sum += 1
+      end
+    end
+    return sum
+  end
 end
