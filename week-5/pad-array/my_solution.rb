@@ -2,7 +2,7 @@
 
 # I worked on this challenge Mira Scarvalone
 
-# I spent 2.5 hours on this challenge.
+# I spent 3 hours on this challenge.
 
 
 # Complete each step below according to the challenge directions and
