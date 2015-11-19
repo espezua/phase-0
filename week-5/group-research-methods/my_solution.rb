@@ -1,11 +1,11 @@
 # Research Methods
 
-# I spent [] hours on this challenge.
+# I spent 3 hours on this challenge.
 
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
-# Person 1's solution
+# Person 1
 def my_array_finding_method(source, thing_to_find)
   source.keep_if {|item| item.to_s.include? thing_to_find}
 end
@@ -48,19 +48,33 @@ end
 # 9) .select!(hash) - equivalent to Hash#keep_if (destructive method)
 
 
+
 # Person 2
 def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.map! { |x|
+    if x.is_a?(Integer)
+      x =+ thing_to_modify
+    end
+  x
+  }
+  #REFACTORED SOLUTION
+  #source.map! { |x| x.is_a?(Integer) ? x += thing_to_modify : x }
+
 end
 
 def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.each {|key, value| source[key] = value + thing_to_modify}
+
 end
 
 # Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
+# I used .map! for the array to change each element in the array only if the element is an integer.
+# I used .each to iterate over the hash and changed the values.
+# .map pretty much allows you to change each element with whatever code block you specify.
+# We should all know what .each is and .map is basically the same except each returns the original array.
+# Ruby docs is definitely intimidating at first but if you take the time to read through it
+# and look at the examples it becomes easier to understand.
+
 
 
 # Person 3
@@ -80,6 +94,7 @@ end
 #.select
 #.is_a?
 #.sort_by
+
 
 
 # Person 4
@@ -108,8 +123,8 @@ end
 # delete - deletes the entry
 
 
-# Person 5
 
+# Person 5
 def my_array_splitting_method(source)
   return source.partition {|i| i.is_a? Integer}
 end
@@ -181,10 +196,13 @@ end
 
 
 # Person 2
-
-
-
-
+# Identify and describe the Ruby method(s) you implemented.
+# I used .map! for the array to change each element in the array only if the element is an integer.
+# I used .each to iterate over the hash and changed the values.
+# .map pretty much allows you to change each element with whatever code block you specify.
+# We should all know what .each is and .map is basically the same except each returns the original array.
+# Ruby docs is definitely intimidating at first but if you take the time to read through it
+# and look at the examples it becomes easier to understand.
 
 
 # Person 3
@@ -203,6 +221,7 @@ end
 # 4. The include? method checks if the (thing_to_delete) is in the string and returns true/false.
 # 5. The delete method just deletes the hash or array entry.
 
+
 # Person 5
 # The partition method is an enumerable method. Basically,
 # it's a method that uses .each to go through each element.
@@ -210,12 +229,3 @@ end
 # want in the first nested array evaluates to true, while
 # everything else will automatically go into the second array.
 
-
-
-
-# Release 3: Reflect!
-# What did you learn about researching and explaining your research to others?
-#
-#
-#
-#
