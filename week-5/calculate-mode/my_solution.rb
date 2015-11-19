@@ -9,7 +9,6 @@
 # is commented.
 
 
-
 # 0. Pseudocode
 
 # What is the input?
@@ -117,7 +116,7 @@ end
 # 4. Reflection
 =begin
 Which data structure did you and your pair decide to implement and why?
-
+At first we tried solving for mode by
 
 
 Were you more successful breaking this problem down into implementable pseudocode
@@ -131,6 +130,17 @@ What issues/successes did you run into when translating your pseudocode to code?
 
 What methods did you use to iterate through the content? Did you find any good ones
 when you were refactoring? Were they difficult to implement?
+We used the .each method and .keep_if to iterate through the content.
+
+The .each method helped us to find the value for max_frequency by:
+ *iterating through each element in the array
+ *counting the number of times the item was in the array
+ *then updating the value for max_frequency if the item count was greater
+
+The .keep_if method help us to only keep the elements in the array by
+*iterating through each element
+*comparing if the item count was equal to the max_frequency value
+*if the condition evaluated to false the item was deleted
 
 
 
