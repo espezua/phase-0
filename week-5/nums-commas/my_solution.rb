@@ -123,8 +123,10 @@ def separate_comma(num)
   num_array.join("")
 end
 
-#p separate_comma(100)
-#p separate_comma(1234567891234)
+p separate_comma(100)
+p separate_comma(67234)
+p separate_comma(759496070)
+p separate_comma(1234567891234)
 
 # 3. Reflection
 =begin
