@@ -115,6 +115,8 @@ already familiar with? What was it and why did you decide that was a good option
 Mostly we re-used methods we were already familiar with like collect! to modify
 the elements with the nested arrays.  We used kind_of? and is_a? that were new
 for me, but essentially do the same thing by checking whether the object is of
-a particular class and returns true/false.
+a particular class and returns true/false.  Also, we used recursion that was new
+for me and very useful in creating a method that could work with any amount of
+nested arrays.
 
 =end
