@@ -1,4 +1,4 @@
-# Release 3:
+# Release 4:
 
 class Profile
 # here is the change, we combined the attr_writer and attr_reader into one declaration: attr_accessor
