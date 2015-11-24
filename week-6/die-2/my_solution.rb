@@ -4,12 +4,6 @@
 # I worked on this challenge by myself.
 # I spent 1 hour on this challenge.
 
-# Pseudocode
-
-# Input:
-# Output:
-# Steps:
-
 
 # Input: takes a list(array) of labels(strings)
 # Output:
