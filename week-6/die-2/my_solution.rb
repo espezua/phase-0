@@ -43,11 +43,11 @@ class Die
   end
 
   def sides
-    @side = @labels.length
+    @labels.length
   end
 
   def roll
-    @roll = @labels.shuffle.slice(0)
+    @labels.shuffle.slice(0)
   end
 end
 
@@ -60,11 +60,11 @@ class Die
   end
 
   def sides
-    @side = @labels.length
+    @labels.length
   end
 
   def roll
-    @roll = @labels.sample
+    @labels.sample
   end
 end
 
@@ -75,14 +75,35 @@ end
 What were the main differences between this die class and the last one you created in
 terms of implementation? Did you need to change much logic to get this to work?
 
+Most of the logic stayed the same like initializing a variable for the sides(labels), raising
+an ArgumentError for invalid arguments, returning the number of sides on the die, and
+returning a random value for the die when the roll method is called.
+
+The main differences are:
+Die Class 1                                    Die Class 2
+*argument: a number for the sides            *argument: an array of strings
+*ArgumentError: raise if the number          *ArgumentError: raise if the array is empty
+ is less than 1                              *sides: returns the length of the array
+*roll: returns a random number from          *roll: returns a random string(label) from the array
+ 1 to the number of sides
+
 
 What does this exercise teach you about making code that is easily changeable or modifiable?
+You can make your life easier by creating code that is DRY and easy to understand. When you
+look back at the code later it will be easier to remember why you implemented something in a
+particular way.  Also, it allows for the code to be reused for something else by making
+a few simple edits.
 
 
 What new methods did you learn when working on this challenge, if any?
+A new method I learned about was the Array#sample method that chooses a random element or
+n random elements from an array.
 
 
 What concepts about classes were you able to solidify in this challenge?
+Some concepts about classes there were solidified are:
+*initializing variables at the beginning of your class
+*you can use instance variables across multiple methods
 
 
 =end
