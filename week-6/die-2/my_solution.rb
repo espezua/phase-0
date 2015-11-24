@@ -11,12 +11,12 @@
 #  .side: returns the number of sides on the die
 # Steps:
 =begin
-CLASS Die takes one parameter for the labels of the sides of a die
+CLASS Die
   DEF initialize the labels for the sides of the die class
     WHILE the list is empty
       raise an argument error ("The array can't be empty.")
     END
-    INIT an instance variable for
+    INIT an instance variable for the labels
   END
   DEF a method for sides
     return the length of the list for the number of sides
