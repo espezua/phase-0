@@ -5,14 +5,15 @@
 =begin
 # Release 0: Pseudocode
 # Outline:
-
+  DEF initialize method that takes a list of number lists for the board
+    SET @bingo_board equal to board
+    SET @letters equal to ["B", "I", "N", "G", "O"]
 # Create a method to generate a letter ( b, i, n, g, o) and a number (1-100)
   DEF call method to select a random letter and number
-    SET @letters instance variable for ["B", "I", "N", "G", "O"]
-    SET @random_letter instance variable equal to a random choice from @letters
-    SET @random_number instance variable equal to a random number from 1-100
+    SET random_letter variable equal to a random choice from @letters
+    SET random_number variable equal to a random number from 1-100
     put to the console "Your number is "
-    RETURN the @random_letter and @random_number
+    SET @combo to random_letter and random_number
   END
 
 # Check the called column for the number called.
@@ -30,10 +31,19 @@
   #replace the number with an "X" if equal
 
 # Display a column to the console
-  #fill in the outline here
+  DEF show a column on the bingo board
+    iterate through each row
+    print the number in each row for the column
+  END
+
 
 # Display the board to the console (prettily)
-  #fill in the outline here
+  DEF show the bingo board
+    print each of the bingo letters
+    print 20 times '-'
+    iterate through each row
+    print each of the numbers in a row
+  END
 =end
 
 # Initial Solution
@@ -42,19 +52,109 @@ class BingoBoard
 
   def initialize(board)
     @bingo_board = board
+    @letters = ["B", "I", "N", "G", "O"]
   end
 
   def call
-    @letters = ["B", "I", "N", "G", "O"]
-    @random_letter = @letters.sample
-    @random_number = rand(1..100)
-    puts "Your number is #{@random_letter}#{@random_number.to_s}"
-    return [@random_letter, @random_number]
+    random_letter = @letters.sample
+    random_number = rand(1..100)
+    puts "Your number is #{random_letter}#{random_number.to_s}"
+    @combo = [random_letter, random_number]
   end
 
+  def check
+    if @combo[0] == "B"
+      @bingo_board.each do |row|
+        if @combo[1] == row[0]
+          row[0] = 'X'
+        end
+      end
+    elsif @combo[0] == "I"
+      @bingo_board.each do |row|
+        if @combo[1] == row[1]
+          row[1] = 'X'
+        end
+      end
+    elsif @combo[0] == "N"
+      @bingo_board.each do |row|
+        if @combo[1] == row[2]
+          row[2] = 'X'
+        end
+      end
+    elsif @combo[0] == "G"
+      @bingo_board.each do |row|
+        if @combo[1] == row[3]
+          row[3] = 'X'
+        end
+      end
+    elsif @combo[0] == "O"
+      @bingo_board.each do |row|
+        if @combo[1] == row[4]
+          row[4] = 'X'
+        end
+      end
+    end
+  end
+
+  def show_column(col)
+    puts "Column #{col.to_s}"
+    @bingo_board.each {|row| puts row[col-1] }
+  end
+
+  def display_board
+    puts @letters.join('   ').center(20)
+    puts '-' * 20
+    @bingo_board.each {|row| puts row.join('  ').center(20) }
+  end
 end
 
 # Refactored Solution
+
+class BingoBoard
+
+  def initialize(board)
+    @bingo_board = board
+    @letters = ['B', 'I', 'N', 'G', 'O']
+  end
+
+  def call
+    random_letter = @letters.sample
+    random_number = rand(1..100)
+    puts "Your number is #{random_letter}#{random_number.to_s}"
+    @combo = [random_letter, random_number]
+  end
+
+  def check  #.each method with if condition to one line
+    if @combo[0] == 'B'
+      @bingo_board.each { |row| row[0] = 'X' if @combo[1] == row[0] }
+    elsif @combo[0] == 'I'
+      @bingo_board.each { |row| row[1] = 'X' if @combo[1] == row[1] }
+    elsif @combo[0] == 'N'
+      @bingo_board.each { |row| row[2] = 'X' if @combo[1] == row[2] }
+    elsif @combo[0] == 'G'
+      @bingo_board.each { |row| row[3] = 'X' if @combo[1] == row[3] }
+    elsif @combo[0] == 'O'
+      @bingo_board.each { |row| row[4] = 'X' if @combo[1] == row[4] }
+    end
+  end
+
+  def show_column(col) #prints column letter instead of number & numbers aligned
+    col_num = col - 1
+    col_letter = @letters[col_num]
+    puts "Column #{col_letter}"
+    @bingo_board.each {|row| puts row[col_num].to_s.center(8) }
+  end
+
+  def display_board #add lines to define top and bottom of board
+    line = '-' * 25
+    puts line
+    puts @letters.join('    ').center(25)
+    puts line
+    @bingo_board.each {|row| puts row.join('   ').center(25) }
+    puts line
+  end
+end
+
 
 
 
@@ -65,8 +165,18 @@ board = [[47, 44, 71, 8, 88],
         [25, 31, 96, 68, 51],
         [75, 70, 54, 80, 83]]
 
-p new_game = BingoBoard.new(board)
-p new_game.call
+new_game = BingoBoard.new(board)
+new_game.call
+new_game.check
+new_game.call
+new_game.check
+new_game.call
+new_game.check
+new_game.call
+new_game.check
+
+new_game.show_column(4)
+new_game.display_board
 
 #Reflection
 =begin
