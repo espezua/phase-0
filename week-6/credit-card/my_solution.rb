@@ -111,13 +111,27 @@ p new_card3.check_card()
 # Reflection
 =begin
 What was the most difficult part of this challenge for you and your pair?
+The most difficult part of this challenge for my pair and I was refactoring.
+Initially, we tried to break the check method into individual methods but
+we struggled with getting the new individual methods to work with each
+other properly.  When ended up choosing to refactor our initial solution
+for readability and DRYness including comments to make it clear what
+each part of the check method was doing.
 
 
 What new methods did you find to help you when you refactored?
+There weren't any new methods we used during refactoring but
+I was able to share with my partner that the #reduce and #inject methods
+in our initial solution are aliases and do the same thing.
 
 
 What concepts or learnings were you able to solidify in this challenge?
-
+I think a concept that I was able to solidfy was using methods on objects/classes
+in the correct order.  At first we were chaining some methods in the wrong order
+but this helped me pay attention to an object's class and what methods are
+available for specific classes.  Also, I think I was able to improve in
+making sure the steps within a method build upon one another using the
+results from the previous steps.
 
 
 =end
