@@ -1,6 +1,6 @@
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
-# I spent [#] hours on this challenge.
+# I spent 6 hours on this challenge.
 
 =begin
 # Release 0: Pseudocode
@@ -180,25 +180,64 @@ new_game.display_board
 
 #Reflection
 =begin
-How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
+*How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
+I feel I'm getting better at breaking problems into small steps but it's still a struggle.
+I reviewed my pseudocode to ensure I had included all the steps I thought were necessary and
+sometimes overanalyzed the chocies I had made.  I feel my pseudocoding style is detailed
+and clean because I capitalize keywords, indent code dependent on lines above it, try to
+be language agnostic, and it reads like English.
 
 
-What are the benefits of using a class for this challenge?
+*What are the benefits of using a class for this challenge?
+The benefits of using a class are when you instantiate a new object it gives you access to
+all the methods created for that class and the numbers that are replaced with 'X' retain that
+state with that instantiated object.
 
 
-How can you access coordinates in a nested array?
+*How can you access coordinates in a nested array?
+To access coordinates in a nested array you need to pay attention to the structure and use
+syntax like array[index][index] for the indices.  The first index will access that element
+in the array and the second index will access that element within the nested array.
+For instance:
+my_array = [[1,2,3], [4,5,6], [7,8,9]]
+To access the number 7 I would use my_array[2][0]
 
 
-What methods did you use to access and modify the array?
+*What methods did you use to access and modify the array?
+I used the #each method to access and modify the array by setting the variables using
+the syntax array[index].
 
 
-Give an example of a new method you learned while reviewing the Ruby docs.
-Based on what you see in the docs, what purpose does it serve, and how is it called?
+*Give an example of a new method you learned while reviewing the Ruby docs.
+*Based on what you see in the docs, what purpose does it serve, and how is it called?
+I learned about the Array#transpose method that works on equally sized subarrays
+and returns a new array.  The method changes the rows and columns of the array
+but it's not destructive.
+For instance,
+array = [[2,4,6], [3,5,7]]
+array.transpose returns [[2, 3], [4, 5], [6, 7]]
 
 
-How did you determine what should be an instance variable versus a local variable?
+*How did you determine what should be an instance variable versus a local variable?
+I determined what would be an instance variable based on whether I would need other
+methods to have access to its value.  For example, I made an instance variable for the
+letters  ['B', 'I', 'N', 'G', 'O']. I used the variable to select a random letter in the
+call method, print the a letter with the column numbers for the show_column method, and
+print the letters for the title of the bingo board for the display_board method.  I
+determined what would be a local variable if I only needed that value for a specific
+method. For example, I created the local variable random_letter to store the value of
+a random sample from the @letters variable. Then I created the local variable random_number
+to store the value of a random number from 1-100.  To give the check method access to
+these values I stored them in the @combo instance variable.
 
 
-What do you feel is most improved in your refactored solution?
+*What do you feel is most improved in your refactored solution?
+I feel the readability of my refactored solution is the most improved because it's easier
+to understand the logic of the check method.  I changed the code to be evaulated after each
+if/elsif condition to one line.  By doing this, you can quickly see what code will be evaulated
+based on the letter from the call method.  This conveniently shows which letter corresponds
+to each row's index and that the number at the index will be replaced with 'X' if the number
+from the call method is equal to the number at that row's index.
+
 
 =end
