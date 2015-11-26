@@ -60,48 +60,53 @@ end
 
 class CreditCard
   def initialize(card_number)
+    #creates an array of all the digits in the card number
     @card_number = card_number.to_s.split("").map {|num| num.to_i}
     if @card_number.length != 16
       raise ArgumentError.new("Not a valid credit card! Please make sure all digits are entered.")
     end
   end
 
-   def check_card
-     number_array = @card_number
+  def check_card
 
-     #doubles each other digit
-     number_array.each_index do |index|
-       if index % 2 == 0
-         number_array[index] *= 2
-       end
-     end
+    #doubles every other digit
+    @card_number.each_index do |index|
+      if index % 2 == 0
+        @card_number[index] *= 2
+      end
+    end
 
-     #splits double-digit numbers into individual digits
-     number_array.map! do |number|
-       if number > 9
-         number.to_s.split("").map! {|number| number.to_i}
-       else
-         number
-       end
-     end
+    #splits double-digit numbers into individual digits
+    @card_number.map! do |number|
+      if number > 9
+        number.to_s.split("").map! {|number| number.to_i}
+      else
+        number
+      end
+    end
 
-     #sums all the digits
-     sum = number_array.flatten.inject(:+)
+    #finds the sum of all the digits
+    sum = @card_number.flatten.inject(:+)
 
-     #Collapsed four lines into one to evaluate true or false
-     sum % 10 == 0 ? true : false
-   end
-
+    #Collapsed four lines into one to evaluate true or false
+    sum % 10 == 0 ? true : false
+  end
 
 end
 
+=begin Driver Code
 new_card = CreditCard.new(4563960122001999)
-p new_card.check_card
-
-
+p new_card.check_card()
 
 new_card1 = CreditCard.new(4563960122001996)
-p new_card1.check_card
+p new_card1.check_card()
+
+new_card2 = CreditCard.new(456396012200199)
+p new_card2.check_card()
+
+new_card3 = CreditCard.new(45639601220019967)
+p new_card3.check_card()
+=end
 
 # Reflection
 =begin
