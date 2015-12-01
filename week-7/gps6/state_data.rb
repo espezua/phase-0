@@ -1,6 +1,14 @@
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census
+=begin
+What is going on with this hash? What does it have in it?
+It's a hash with keys and each key's value is a hash
+The key's values are a hash with the keys population_density and population.
+The initial hash's keys use the hash rocket and the nested hashes use symbols.
 
+What kind of variable is STATE_DATA, and what's its scope?
+It's a constant and has a global scope.
+=end
 
 STATE_DATA = {
   "Alabama" => {population_density: 94.65, population: 4822023},
