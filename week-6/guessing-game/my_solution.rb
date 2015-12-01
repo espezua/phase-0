@@ -81,9 +81,9 @@ class GuessingGame
 
   def guess(guess)
     @guess = guess
-    if guess > @answer
+    if @guess > @answer
       :high
-    elsif guess < @answer
+    elsif @guess < @answer
       :low
     else
       :correct
