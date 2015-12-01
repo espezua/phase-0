@@ -1,6 +1,6 @@
 // Manipulating JavaScript Objects
 
-// I worked on this challenge: [by myself, with: ]
+// I worked on this challenge by myself.
 
 // There is a section below where you will write your code.
 
@@ -15,25 +15,47 @@ var terah = {
 }
 // __________________________________________
 // Write your code below.
+var adam = {
+  name: 'Adam',
+  spouse: terah,
+}
 
+terah.spouse = adam;
+terah.weight = 125;
+delete terah['eyeColor'];
+terah.children = {
+  carson: {name: 'Carson'},
+  carter: {name: 'Carter'},
+  colton: {name: 'Colton'}
+}
 
-
-
-
-
-
-
+adam.children = terah.children;
 
 
 
 // __________________________________________
 // Reflection: Use the reflection guidelines
-//
-//
-//
-//
-//
-//
+
+//What tests did you have trouble passing?
+//What did you do to make it pass? Why did that work?
+//I had trouble passing the test for the carson property because I was trying to pass
+//the tests by just reading the error messages without using the outline and I was
+//having trouble interpreting exactly what I needed to do based on the error message.
+//Once I added an object with the values 'name: "Carson"' assigned to the carson property
+//in the terah's children property it was easy to pass the other tests.  This worked
+//because the error message received was 'carson should be defined as an object and
+//assigned as a child of Terah'.
+
+
+//How difficult was it to add and delete properties outside of the object itself?
+//It was simple to add and delete properties outside of the object itself using
+// the dot property, square brackets, and literal notation.
+
+
+//What did you learn about manipulating objects in this challenge?
+// This challenge helped me to get familiar with manipulating data in JavaScript objects
+// by using the delete method, accessing/calling an object's property, and nesting objects
+// with data inside the property of another object.
 
 
 // __________________________________________
