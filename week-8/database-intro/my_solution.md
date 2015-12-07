@@ -3,48 +3,50 @@
 
 ##SQL Queries
 
-1. Select all data for all states:
+1) Select all data for all states:
 
 `SELECT * FROM states;`
 
-2. Select all data for the regions:
+2) Select all data for the regions:
 
 `SELECT * FROM regions;`
 
-3. Select the state_name and population for all states:
+3) Select the state_name and population for all states:
 
 `SELECT state_name, population FROM states;`
 
-4. Select the state_name and population for all states ordered by population. The most populous state should be at the top:
+4) Select the state_name and population for all states ordered by population. The most populous state should be at the top:
 
 `SELECT state_name, population FROM states ORDER BY population DESC;`
 
-5. Select the 'state_name's for the states in region 7:
+5) Select the 'state_name's for the states in region 7:
 
 `SELECT state_name FROM states WHERE region = 7;`
 
-6. Select the 'state_names' and 'population_density' with a population density over 50 ordered from least to most dense:
+6) Select the 'state_names' and 'population_density' with a population density over 50 ordered from least to most dense:
 
 `SELECT state_name, population_density FROM states WHERE population_density > 50 ORDER BY population_density ASC;`
 
-7. Select all state_names for states with a population between 1 million and 1.5 million people:
+7) Select all state_names for states with a population between 1 million and 1.5 million people:
 
 `SELECT state_name FROM states WHERE population BETWEEN 1000000 AND 1500000;`
 
-8. Select all state_names and region_id ordered by region in ascending order:
+8) Select all state_names and region_id ordered by region in ascending order:
 
 `SELECT state_name, region_id FROM states ORDER BY region_id ASC;`
 
-9. Select the 'region_name' for the regions with "Central" in the name:
+9) Select the 'region_name' for the regions with "Central" in the name:
 
 `SELECT region_name FROM regions WHERE region_name LIKE '%Central';`
 
-10. Select all of the region names and the state names in ascending order by regional id:
+10) Select all of the region names and the state names in ascending order by regional id:
 
 `SELECT regions.region_name, states.state_name FROM regions INNER JOIN states ON regions.id=states.region_id ORDER BY states.region_id ASC;`
 
+
 ##`persons ` and `outfits` Schema
 ![Outfit Schema](outfit-schema.png)
+
 
 ##Reflection
 ###What are databases for?
@@ -79,11 +81,10 @@ To select information from an SQL database:
 `LIMIT`: the number is the maximum number of rows displayed.
 
 `WHERE [column_name]`: filters which data gets shown using:
-```
+
 `BETWEEN [some_value] AND [another_value]`L displays data that falls within the range
 
 `LIKE`: displays data that matches a specific pattern with the underscore `_` is a wildcard for only 1 character and the percent `%` is a wildcard for 1 or more characters.
 
 `AND`: used to chain 2 or more filters/modifiers.
-```
 ```
