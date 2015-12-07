@@ -72,6 +72,7 @@ When you select(read) information out of a SQL database you need to follow the s
 To select information from an SQL database:
 ```
 `SELECT * From table_name`: the asterisk * wildcard will select all the columns `FROM` a table
+
 `SELECT column_name FROM table_name`: the name of the column or chosen columns will be selected `FROM` a table.
 
 `GROUP BY [column_name]`: groups together the rows of data that share the [column_name]
@@ -79,7 +80,8 @@ To select information from an SQL database:
 `ORDER BY [column_name]`: sorts data by ascending order with the `ASC` keyword, or descending order with the `DESC` keyword.
 
 `LIMIT`: the number is the maximum number of rows displayed.
-
+```
+```
 `WHERE [column_name]`: filters which data gets shown using:
 
 `BETWEEN [some_value] AND [another_value]`L displays data that falls within the range
