@@ -80,10 +80,10 @@ GROUP BY [column_name]: groups together the rows of data that share the [column_
 ORDER BY [column_name]: sorts data by ascending order with the `ASC` keyword, or descending order with the `DESC` keyword.
 
 LIMIT: the number is the maximum number of rows displayed.
-```
 
-`WHERE [column_name]`: filters which data gets shown using:
-```
+
+WHERE [column_name]: filters which data gets shown using:
+
 BETWEEN [some_value] AND [another_value]: displays data that falls within the range
 LIKE: displays data that matches a specific pattern with the underscore `_` is a wildcard for only 1 character and the percent `%` is a wildcard for 1 or more characters.
 AND: used to chain 2 or more filters/modifiers.
