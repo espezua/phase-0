@@ -1,11 +1,15 @@
 /*
 Gradebook from Names and Scores
-I worked on this challenge [by myself, with:]
-This challenge took me [#] hours.
+
+I worked on this challenge with Nick Davies
+This challenge took me 1 hour.
+
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
 variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
+
 Do not alter the students and scores code.
+
 */
 
 var students = ["Joseph", "Susan", "William", "Elizabeth"]
@@ -15,42 +19,77 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
-
-
-
-
-
 // __________________________________________
 // Write your code below.
+var gradebook = {};
+for (var index in students){
+  gradebook[students[index]] = {};
+  gradebook[students[index]].testScores = scores[index];
+}
+gradebook.addScore = function (name,score){
+  gradebook[name].testScores.push(score);
+}
 
+gradebook.getAverage = function(name){ return average(gradebook[name].testScores)};
 
-
-
-
-
-
+function average(array) {
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum/array.length
+}
 
 // __________________________________________
 // Refactored Solution
+var gradebook = {};
+for (var index in students){
+  gradebook[students[index]]={testScores: scores[index]};
+}
+gradebook.addScore = function (name,score){
+  gradebook[name].testScores.push(score);
+}
 
+gradebook.getAverage = function(name){ return average(gradebook[name].testScores)};
 
-
-
-
-
+function average(array) {
+  return array.reduce((prev,curr)=>prev+curr)/array.length;
+}
 
 
 // __________________________________________
 // Reflect
+/*
+What did you learn about adding functions to objects?
+I learned it was very easy to assign a function as the value of a
+property in an object or to declare a function on an object. Also,
+it was really helpful to practice using dot and bracket notation
+to better understand which should be used depending on the parameters
+you'll be passing to functions or an object's functions.
 
 
+How did you iterate over nested arrays in JavaScript?
+We iterated over nested arrays using a for loop and bracket notation
+for accessing name values to go through each element of students to
+add them as an object in our gradebook with each student property having
+the property of testScores with an array of values from scores.
 
 
+Were there any new methods you were able to incorporate?
+If so, what were they and how did they work?
+When refactoring we used the reduce method in the average function,
+which applies a function  against an accumulator and each value of
+the array, from left-to-right, that reduces the array to a single value.
 
+You can use the callback function syntax:
+ arr.reduce(function(previousValue, currentValue, currentIndex, array) {
+  return previousValue + currentValue;
+});
 
+Or the Arrow Function(we used this format):
+arr.reduce( (prev, curr) => prev + curr );
 
-
-
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 
