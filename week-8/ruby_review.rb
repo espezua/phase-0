@@ -48,7 +48,6 @@ end
 p super_fizzbuzz([30, 9, 20, 1])
 
 
-
 # Reflection
 =begin
 Reflection
@@ -75,7 +74,7 @@ JavaScript and Ruby.
 
 
 What are you going to study to get more prepared for Phase 1?
-I plan to tackle every challenge in the Ruby module by the end of Phase 0.
+I plan on doing every challenge in the Ruby module by the end of Phase 0.
 Also, trying to solve some of the challenges using JavaScript could be helpful
 in understanding & solidifying the similarities/differences in what can be
 implemented in each language, how to implement/solve it in each language, and
