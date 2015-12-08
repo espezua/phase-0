@@ -109,42 +109,42 @@
 
 
 // Refactored Code
-function GoldCoin(coin) {
-  this.coin = coin;
+function GoldCoin() {
   this.posX = Math.floor(Math.random()*6 + 1),
   this.posY = Math.floor(Math.random()*6 + 1)
 }
 
-var coin1 = new GoldCoin("Coin 1");
-var coin2 = new GoldCoin("Coin 2");
-var coin3 = new GoldCoin("Coin 3");
-var coin4 = new GoldCoin("Coin 4");
-var coin5 = new GoldCoin("Coin 5");
-var coin6 = new GoldCoin("Coin 6");
-var coin7 = new GoldCoin("Coin 7");
-var coin8 = new GoldCoin("Coin 8");
-var coin9 = new GoldCoin("Coin 9");
-var coin10 = new GoldCoin("Coin 10");
-
-var goldCoins = [ coin1, coin2, coin3, coin4, coin5, coin6, coin7, coin8, coin9, coin10];
+var goldCoins = [];
+var createCoins= function(num) {
+  for (var i = 0; i < num; i++) {
+    goldCoins.push(new GoldCoin());
+  }
+  return goldCoins
+}
 
 var displayCoins = function () {
      for (var i = 0; i < goldCoins.length; i++) {
-      console.log(goldCoins[i].coin + "'s position is " + goldCoins[i].posX + "," + goldCoins[i].posY)
+      console.log("The coin's position is " + goldCoins[i].posX + "," + goldCoins[i].posY)
     }
 }
 
-var trap = {
-  posX: Math.floor(Math.random()*6 + 1),
-  posY: Math.floor(Math.random()*6 + 1)
-};
-
+function Trap() {
+  this.posX = Math.floor(Math.random()*6 + 1),
+  this.posY = Math.floor(Math.random()*6 + 1)
+}
+var traps = [];
+var createTraps = function(num){
+  for (var i = 0; i < num; i++) {
+    traps.push(new Trap());
+  }
+  return traps
+}
 
 var leprechaun = {
   posX: 0,
   posY: 0,
   potOfGold: 0,
-  health: true,
+  health: 100,
   success: false,
   move: function(direction, amount) {
     switch(direction){
@@ -155,10 +155,14 @@ var leprechaun = {
     }
 
     console.log("The leprechaun's position is " + this.posX + "," + this.posY);
-
-    if(this.posX === trap.posX && this.posY === trap.posY){
-      this.health = false;
-      console.log("You're trapped and hurt. Game Over!");
+    if (this.health > 0) {
+      for (var i = 0; i < traps.length; i++) {
+        if(this.posX === traps[i].posX && this.posY === traps[i].posY){
+          this.health -= 10;
+        }
+      }
+    } else {
+      console.log("Game Over!");
     }
 
     if(this.potOfGold === 5){
@@ -176,7 +180,8 @@ var leprechaun = {
 
 };
 
-
+createCoins(10);
+createTraps(5);
 displayCoins();
 leprechaun.move('down', 2);
 leprechaun.move('right', 2);
