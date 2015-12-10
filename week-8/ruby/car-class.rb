@@ -94,7 +94,8 @@ END
 
 # 3. Initial Solution
 class Car
-  attr_accessor :model, :color, :distance, :direction, :total_distance, :speed, :deliveries
+  attr_accessor :model, :color, :direction
+  attr_reader :speed, :deliveries, :distance, :total_distance
 
   def initialize(model, color)
     @model = model
@@ -104,10 +105,11 @@ class Car
     @deliveries = []
   end
 
-  def drive(distance, speed=@speed)
+  def drive(distance, speed)
     @distance = distance
     @speed = speed
     @direction = "straight"
+    @total_distance += @distance
   end
 
   def turn(direction)
@@ -126,11 +128,6 @@ class Car
     @speed = 0
   end
 
-  def total_distance
-    @total_distance += @distance
-  end
-
-
   def pizza_order(pizza)
     @deliveries <<  pizza
   end
@@ -143,7 +140,7 @@ class Car
     puts "\nCar's model: #{@model}"
     puts "\nCar's color: #{@color}"
     puts "\nCar's speed: #{@speed}"
-    puts "\nCar's direction: #{@turn_direction}"
+    puts "\nCar's direction: #{@direction}"
     puts "\nCurrent distance: #{@distance}"
     puts "\nTotal distance: #{@total_distance}"
     puts "\nPizza's to deliver: #{@deliveries}"
@@ -180,6 +177,7 @@ p car1.deliveries
 p car1.model
 p car1.color
 p car1.print_info
+car1.color = "blue"
 p car1.drive(0.5, 30)
 p car1.stop
 p car1.print_info

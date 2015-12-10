@@ -174,6 +174,7 @@ var leprechaun = {
       if (this.posX === goldCoins[i].posX && this.posY === goldCoins[i].posY) {
         console.log("You found a gold coin!");
         this.potOfGold += 1;
+
       }
     }
   }

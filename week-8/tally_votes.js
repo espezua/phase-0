@@ -31,7 +31,7 @@ var votes = {
   "Xavier": { president: "Steve", vicePresident: "Hermann", secretary: "Fred", treasurer: "Ivy" },
   "Yvonne": { president: "Bob", vicePresident: "Zane", secretary: "Fred", treasurer: "Hermann" },
   "Zane": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Mary" }
-}
+};
 
 // Tally the votes in voteCount.
 var voteCount = {
@@ -39,7 +39,7 @@ var voteCount = {
   vicePresident: {},
   secretary: {},
   treasurer: {}
-}
+};
 
 /* The name of each student receiving a vote for an office should become a property
 of the respective office in voteCount.  After Alex's votes have been tallied,
@@ -60,20 +60,60 @@ var officers = {
   vicePresident: undefined,
   secretary: undefined,
   treasurer: undefined
-}
+};
 
 // Pseudocode
+/*
 
+
+FOR each voter in the votes variable
+  SET a vote variable equal to the voter's values
+  FOR each officer in vote
+    IF officer's name exists as property in voteCount greater than or equal to 1
+      INCREMENT the officer's name value by 1
+    ELSE set the officer's name property in VoteCount to 1
+
+CREATE a sortVotes function takes a keyed list of the talliedVotes
+  SET sortedVotes variable to an empty list
+  FOR each name in the talliedVotes
+    ADD the name and amount of votes to the sortedVotes
+  SORT the values in sortedVotes with highest name that has the most votes first
+  RETURN the first value from sortedVotes
+
+FOR each officer in voteCount
+  SET each officer property in officers equal to the return value of sortVotes
+
+*/
 
 // __________________________________________
 // Initial Solution
 
+for (var voter in votes) {
+  var vote = votes[voter];
+  for (var officer in vote) {
+    if (voteCount[officer][vote[officer]] >= 1) {
+      voteCount[officer][vote[officer]] += 1;
+    } else {
+      voteCount[officer][vote[officer]] = 1;
+    }
+  }
+}
+// console.log(voteCount);
 
+function sortVotes(talliedVotes) {
+  var sortedVotes = [];
+  for (var name in talliedVotes) {
+    sortedVotes.push([name, talliedVotes[name]]);
+  }
+  sortedVotes.sort((a,b) => b[1] - a[1]);
+  return sortedVotes[0][0];
+}
 
+for (var officer in voteCount) {
+  officers[officer] = sortVotes(voteCount[officer]);
+}
 
-
-
-
+// console.log(officers);
 // __________________________________________
 // Refactored Solution
 
