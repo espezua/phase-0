@@ -94,13 +94,12 @@ END
 
 # 3. Initial Solution
 class Car
-  attr_accessor :model, :color, :direction
-  attr_reader :speed, :deliveries, :distance, :total_distance
+  attr_accessor :model, :color
+  attr_reader :speed, :deliveries, :distance, :direction, :total_distance
 
   def initialize(model, color)
     @model = model
     @color = color
-    @speed = 0
     @total_distance = 0
     @deliveries = []
   end
@@ -128,8 +127,8 @@ class Car
     @speed = 0
   end
 
-  def pizza_order(pizza)
-    @deliveries <<  pizza
+  def pizza_order(kind, size)
+    @deliveries <<  Pizza.new(kind, size)
   end
 
   def pizza_delivery
@@ -139,7 +138,7 @@ class Car
   def print_info
     puts "\nCar's model: #{@model}"
     puts "\nCar's color: #{@color}"
-    puts "\nCar's speed: #{@speed}"
+    puts "\nCar's speed: #{@speed}mph"
     puts "\nCar's direction: #{@direction}"
     puts "\nCurrent distance: #{@distance}"
     puts "\nTotal distance: #{@total_distance}"
@@ -158,45 +157,28 @@ class Pizza
 end
 
 
-
-
-# 4. Refactored Solution
-
-
-
-
-
-
-# 1. DRIVER TESTS GO BELOW THIS LINE
 car1 = Car.new("Ford Focus", "black")
-cheese_pizza = Pizza.new("cheese", "large")
-car1.pizza_order(cheese_pizza)
-pepperoni_pizza = Pizza.new("pepperoni", "large")
-car1.pizza_order(pepperoni_pizza)
+car1.pizza_order("cheese", "large")
+car1.pizza_order("pepperoni", "large")
 p car1.deliveries
 p car1.model
 p car1.color
 p car1.print_info
 car1.color = "blue"
 p car1.drive(0.5, 30)
-p car1.stop
 p car1.print_info
+p car1.stop
 p car1.turn("right")
+p car1.print_info
 p car1.drive(2, 50)
+p car1.pizza_delivery
 p car1.speed
 p car1.change_speed(15)
 p car1.stop
 p car1.turn("left")
 p car1.print_info
 p car1.drive(1.5, 35)
+p car1.print_info
 p car1.stop
 p car1.total_distance
 p car1.print_info
-
-
-
-
-# 5. Reflection
-
-
-
