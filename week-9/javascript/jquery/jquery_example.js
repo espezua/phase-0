@@ -32,6 +32,10 @@ $('body').css({'background-color': 'pink'})
 
 
 
-
+/* Reflection
+What is jQuery?
+What does jQuery do for you?
+What did you learn about the DOM while working on this challenge?
+*/
 
 })  // end of the document.ready function: do not remove or write DOM manipulation below this.
