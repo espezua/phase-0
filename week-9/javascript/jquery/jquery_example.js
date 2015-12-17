@@ -82,7 +82,20 @@ img.on('mouseleave', function(e){
 //   })
 // })
 
+/*
+What is jQuery?
+jQuery is a lightweight, "write less, do more", JavaScript DOM manipulation library.
+
+What does jQuery do for you?
+jQuery simplifies things like HTML document traversal and manipulation, event handling,
+animation, and AJAX interactions for rapid web development.
+
+What did you learn about the DOM while working on this challenge?
+I learned DOM elements/nodes can be selected and manipulated using the jQuery API.
+Also, if you want to animate a border the element needs to have a defined border first.
+and the CSS .hover effect is like combining the methods mouseenter & mouseleave
+and mouseover & mouseout.
 
 
-
+*/
 })  // end of the document.ready function: do not remove or write DOM manipulation below this.
