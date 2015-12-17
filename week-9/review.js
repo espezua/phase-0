@@ -17,7 +17,9 @@ CREATE an object called "List"
 */
 //Release 3: Initial Solution
 function List () {
-  this.addItem = function (item, qty){this[item]=qty;};
+  this.addItem = function (item, qty){
+    this[item]=qty;
+  };
   this.removeItem = function (item){
     delete this[item];
   };
@@ -33,7 +35,7 @@ function List () {
 //Release 4: Refactor
 /*Object.entries() method looks like it could be useful but it is
 an experimental technology, part of the ECMAScript 2016 (ES7) proposal
-and it's only supported in FireFox.
+and it's only supported by FireFox.
 */
 function List() {
   this.addItem = function(item, qty) {this[item]=qty};
